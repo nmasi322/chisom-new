@@ -149,7 +149,10 @@
 	a {
 		text-decoration: none;
 		cursor: pointer;
-		color: rgb(85, 84, 84);
+		color: #ea580c;
+	}
+	a:hover {
+		text-decoration: underline;
 	}
 	body {
 		margin: 0;

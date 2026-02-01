@@ -1,10 +1,12 @@
 
  <script lang="ts">
-    import { fly, fade, scale } from 'svelte/transition';
+    import { fly, fade } from 'svelte/transition';
     import { cubicOut } from 'svelte/easing';
       import { HouseIcon, UserIcon, FileTextIcon, LightbulbIcon } from '@lucide/svelte';
+	import { page } from '$app/state';
+	import { cn } from '$lib/utils';
 
-    let mobileMenuOpen = false;
+    let mobileMenuOpen = $state(false);
     
     const navItems = [
         {
@@ -39,7 +41,7 @@
 </script>
 
 <nav class="fixed top-0 left-0 right-0 bg-white z-50 ">
-    <div class="flex items-center justify-between py-4 max-w-4/5 mx-auto border-b border-gray-500/20">
+    <div class="flex items-center justify-between py-4 max-sm:px-5 sm:max-w-4/5 mx-auto border-b border-gray-500/20">
         <!-- Logo -->
         <div class="z-50">
             <h1 class="text-2xl sm:text-3xl logo font-black hover:scale-105 transition-transform duration-300 cursor-pointer">
@@ -50,15 +52,16 @@
         <!-- Desktop Navigation -->
         <ul class="hidden md:flex items-center gap-8">
             {#each navItems as navItem, i}
+            {@const isActivePath = page.url.pathname === navItem.url}
                 <li 
                     style="animation-delay: {i * 0.1}s"
                     class="animate-fadeInDown group"
                 >
                     <a href={navItem.url} class="flex items-center hover:text-accent gap-1.5 relative">
                          <span class="">
-                                <navItem.icon class="group-hover:w-5 transition-all duration-300 w-0" />
+                                <navItem.icon class={cn("transition-all duration-300", isActivePath ? "w-5":"group-hover:w-5 w-0")} />
                             </span>
-                        <p class="font-medium gambarino tracking-wide group-hover:text-accent text-gray-600 transition-all duration-300 hover:scale-105 group">
+                        <p class={cn("font-medium gambarino tracking-wide transition-all duration-300 hover:scale-105 group", isActivePath ? "text-accent" :"group-hover:text-accent text-gray-600")}>
                             {navItem.label}
                         </p>
                     </a>
@@ -99,6 +102,8 @@
         >
             <ul class="flex flex-col pt-24">
                 {#each navItems as navItem, i}
+            {@const isActivePath = page.url.pathname === navItem.url}
+
                     <li
                         in:fly={{ x: 50, duration: 300, delay: i * 50, easing: cubicOut }}
                         class="border-b border-gray-600/30 hover:bg-accent/5 group"
@@ -106,10 +111,10 @@
                         <a 
                             href={navItem.url}
                             onclick={closeMenu}
-                            class="flex items-center gap-2 py-3 px-4 gambarino text-lg font-semibold text-gray-700 transition-all duration-300 transform hover:text-accent"
+                            class={cn("flex items-center gap-2 py-3 px-4 gambarino text-lg font-semibold transition-all duration-300 transform", isActivePath?"text-accent":"hover:text-accent text-gray-700")}
                         >
                             <span>
-                                <navItem.icon class="group-hover:w-6 transition-all duration-300 w-0" />
+                                <navItem.icon class={cn("transition-all duration-300", isActivePath ? "w-6":"group-hover:w-6 w-0")} />
                             </span>
                            <span>{navItem.label}</span>
                         </a>
