@@ -1,6 +1,6 @@
 <script lang="ts">
 	import WorkWithMe from "$lib/components/work-with-me.svelte";
-	import { portfolioItems } from "$lib/data";
+	import { portfolioItems } from "$lib/data/portfolio";
 
 </script>
 

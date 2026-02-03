@@ -43,11 +43,11 @@
 <nav class="fixed top-0 left-0 right-0 bg-white z-50 ">
     <div class="flex items-center justify-between py-4 max-sm:px-5 sm:max-w-4/5 mx-auto border-b border-gray-500/20">
         <!-- Logo -->
-        <div class="z-50">
+        <a href="/" class="z-50 hover:no-underline">
             <h1 class="text-2xl sm:text-3xl logo font-black hover:scale-105 transition-transform duration-300 cursor-pointer">
                 Chisom.
             </h1>
-        </div>
+        </a>
 
         <!-- Desktop Navigation -->
         <ul class="hidden md:flex items-center gap-8">
