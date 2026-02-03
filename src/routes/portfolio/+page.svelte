@@ -1,13 +1,47 @@
 <script lang="ts">
 	import WorkWithMe from "$lib/components/work-with-me.svelte";
 	import { portfolioItems } from "$lib/data/portfolio";
+  import gsap from "gsap";
+	import { SplitText } from "gsap/all";
+	import { onMount } from "svelte";
+    
+    gsap.registerPlugin(SplitText);
 
+    onMount(() => {
+        const split = SplitText.create('.title', {
+            type: "words, chars",
+            mask: "words",
+            wordsClass: "word",
+            charsClass: "char",
+        })
+        const paragraphSplit = SplitText.create('.paragraph', {
+            type: "lines, chars",
+            mask: "lines",
+            linesClass: "line",
+            charsClass: "char",
+        })
+
+        gsap.from(split.words, {
+            yPercent: 110,
+            opacity: 0,
+            duration: 0.6, 
+            ease: 'power3.inOut',
+            stagger: {amount:0.5},
+        })
+        gsap.from(paragraphSplit.lines, {
+            yPercent: 110,
+            opacity: 0,
+            duration: 1, 
+            ease: 'power3.inOut',
+            stagger: {amount:0.5},
+        })
+    })
 </script>
 
 <section class="py-10 max-sm:px-5 sm:max-w-4/5 mx-auto">
      <div class="flex flex-col gap-2 mb-8">
-          <h1 class="font-extrabold text-2xl">My Portfolio</h1>
-          <p class="text-sm text-gray-500">
+          <h1 class="font-extrabold text-2xl title">My Portfolio</h1>
+          <p class="text-sm text-gray-500 paragraph">
             Featured below are a few articles, projects and campaigns I've
             written copy and created content for.
           </p>

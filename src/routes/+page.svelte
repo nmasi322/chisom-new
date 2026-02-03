@@ -2,21 +2,54 @@
 	import Button from "$lib/components/ui/button/button.svelte";
 	import WorkWithMe from "$lib/components/work-with-me.svelte";
 	import { InstagramIcon, LinkedinIcon } from "@lucide/svelte";
+	import gsap from "gsap";
+	import { SplitText } from "gsap/all";
+	import { onMount } from "svelte";
 
+    gsap.registerPlugin(SplitText);
 
+    onMount(() => {
+        const split = SplitText.create('.title', {
+            type: "words, chars",
+            mask: "words",
+            wordsClass: "word",
+            charsClass: "char",
+        })
+        const paragraphSplit = SplitText.create('.paragraph', {
+            type: "lines, chars",
+            mask: "lines",
+            linesClass: "line",
+            charsClass: "char",
+        })
+
+        gsap.from(split.words, {
+            yPercent: 110,
+            opacity: 0,
+            duration: 1, 
+            ease: 'power3.inOut',
+            stagger: {amount:0.5},
+        })
+        gsap.from(paragraphSplit.lines, {
+            yPercent: 110,
+            opacity: 0,
+            duration: 1.5, 
+            ease: 'power3.inOut',
+            stagger: {amount:0.5},
+        })
+    })
 </script>
 
 <section class="flex flex-col justify-between max-sm:gap-10 min-h-[calc(100svh-80px)] pt-16 md:pt-20 lg:pt-40">
     <section class="grid xl:grid-cols-3 gap-10 max-sm:px-5 sm:max-w-4/5 mx-auto">
         <div class="md:col-span-2 space-y-6">
              <div class="space-y-3">
-                <h1 class="text-4xl sm:text-5xl leading-[43.2px] sm:leading-[57.6px] font-bold">
+                <h1 class="text-4xl sm:text-5xl leading-[43.2px] sm:leading-[57.6px] font-bold title">
                 Hey there, <br /> I'm Chisom Winifred.
                 </h1>
-                <h2 class="text-lg font-medium text-accent/80">Published Creative Writer</h2>
+                <h2 class="text-lg font-medium text-accent/80 title">Published Creative Writer</h2>
             </div>
             <div> 
-                <p class="text-sm leading-6">
+                <p class="text-sm leading-6 paragraph">
                     I’m a creative writer and editor with a passion for storytelling
                     across digital, print, and literary platforms. I currently serve as
                     Managing Editor at The Lincoln Review, where I oversee fiction,

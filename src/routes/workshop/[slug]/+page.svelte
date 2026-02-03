@@ -20,10 +20,25 @@
             </div>
             <div class="grid lg:grid-cols-2 xl:grid-cols-3 w-fit mx-auto gap-6">
                 <div class="mx-auto">
-                    <img class="sm:h-120" alt={authorInfo.name} src={authorInfo.img} />
+                    <img class="sm:h-120 grayscale" alt={authorInfo.name} src={authorInfo.img} />
                 </div>
-                <div class="h-full xl:col-span-2">
+                <div class="h-full xl:col-span-2 space-y-5">
                     <p class="whitespace-pre-wrap">{authorInfo.bio}</p>
+                    {#if authorInfo.books}
+                        <div class="space-y-3">
+                            <h3 class="font-semibold text-lg">Books by {authorInfo.name}</h3>
+                            <ul class="list-disc pl-5">
+                                {#each authorInfo.books as book}
+                                    <li>
+                                        <a href={book.url}>
+                                            <p class="text-accent/70">{book.title}</p>
+                                        </a>
+                                    </li>
+                                {/each}
+                            </ul>
+                            <span class="text-gray-500 text-sm">N.B. The first three titles are also available as audiobooks, narrated by Angus Freathy. Obtainable from Amazon, Audible, and iTunes.</span>
+                        </div>
+                    {/if}
                 </div>
             </div>
         </div>
@@ -58,10 +73,6 @@
                     </Button>
                 </div>
             </div>
-        {:else if  authorInfo.books}
-            <div></div>
-        {:else}
-            <div></div>
         {/if}
        
     </section>

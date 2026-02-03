@@ -1,7 +1,8 @@
-   import chisom from '$lib/assets/chisom.jpeg'
+   import chisom from '$lib/assets/chisom-portrait.webp'
     import megan from '$lib/assets/megan.jpg'
     import roseline from '$lib/assets/roseline.jpg'
     import summer from '$lib/assets/summer.jpg'
+    import john from '$lib/assets/john.jpg'
 
 export const tutors = [
     {
@@ -69,12 +70,45 @@ export const tutors = [
         }
     },
     {
-        img: chisom,
+        img: john,
         title: "Writer",
         genre: "Fiction",
         url: 'simon-john-wood',
         name: "Simon John Wood",
         bio: 'Simon J. Wood took up creative writing in 2015 after a long hiatus and soon founded Write Away, an international email writing group that ran for six and a half years until 2022, at one point bringing together 49 writers from around the world.\n\nIn 2017 he self-published his first short story, Bound in Morocco, followed by five collections of short fiction, including the To Cut a Short Story Short series and Flash Friction. In 2024, the first three volumes were combined into In Dulci Jubilo: 200 Little Tales. His books are available on Amazon, with eBook editions distributed via Draft2Digital.\n\nBound in Morocco and To Cut a Short Story Short, vols. I and II were adapted into audiobooks narrated by professional narrator Angus Freathy, with eight stories broadcast on BBC Radio Lincolnshire’s Upload programme in 2020. The audiobooks are available on Amazon, Audible, and iTunes.\n\nSimon runs the WordPress site tocutashortstoryshort.com, launched in 2016, which has nearly 1,000 followers and over 346,000 views. Since 2021, he has written a monthly walking column for The Tetford and Salmonby Times, and in 2024 he founded St James Writers, a weekly writers’ group based in Grimsby, UK.\n\nHe was awarded Highly Commended for his short story “The Magician (A Bridge Too Far)” in the Hammond House International Literary Competition. Simon is currently completing a Diploma in Humanities and Social Sciences at Grimsby University Centre and plans to begin a BA (Hons) in Creative and Professional Writing in September 2026. He is currently working on a psychological thriller, To Cut a Short Story Short vol. IV (Flash in Your Face), and a book of walks in the Lincolnshire Wolds.',
-        books: []
+        books: [
+            {
+                title: "Bound in Morocco: A Short Story of Intrigue",
+                url: 'https://www.amazon.co.uk/Bound-Morocco-short-intrigue-subterfuge/dp/1521324662/ref=tmm_pap_swatch_0?_encoding=UTF8&qid=&sr='
+            },
+            {
+                title: "To Cut a Short Story Short: 111 Little Stories",
+                url: 'https://www.amazon.co.uk/Cut-Short-Story-Little-Stories/dp/152134311X/ref=tmm_pap_swatch_0?_encoding=UTF8&qid=1693597166&sr=1-3'
+            },
+            {
+                title: "To Cut a Short Story Short, vol. II: 88 Little Stories",
+                url: 'https://www.amazon.co.uk/Cut-Short-Story-vol-II/dp/B0CFCX6X4Q/ref=tmm_hrd_swatch_0?_encoding=UTF8&qid=&sr='
+            },
+            {
+                title: "Flash Friction – To Cut a Short Story Short, vol. III: 72 Little Stories",
+                url: 'https://www.amazon.co.uk/Flash-Friction-Short-Little-Stories/dp/B09NRGQY45/ref=tmm_pap_swatch_0?_encoding=UTF8&qid=&sr='
+            },
+            {
+                title: "The Window Crack’d and Other Stories: 40 Little Tales of Horror and the Supranatural",
+                url: 'https://www.amazon.co.uk/Window-Crackd-Other-Stories-Supranatural/dp/B09MYXZ71R/ref=tmm_pap_swatch_0?_encoding=UTF8&qid=&sr='
+            },
+            {
+                title: "Letters from Reuben and Other Stories: 40 Little Tales of Mirth",
+                url: 'https://www.amazon.co.uk/Letters-Reuben-Other-Stories-Little/dp/B09MYST5KF/ref=tmm_pap_swatch_0?_encoding=UTF8&qid=&sr='
+            },
+            {
+                title: "In Dulci Jubilo: Two Hundred Little Stories",
+                url: 'https://www.amazon.co.uk/Dulci-Jubilo-Hundred-Little-Stories/dp/B0CGGHF6YV/ref=tmm_pap_swatch_0?_encoding=UTF8&qid=&sr='
+            }
+        ],
+        masterclass: {
+            title: "Creating and Monetising Audiobooks",
+            description: "This session explores how writers can turn their work into audiobooks and generate income from audio publishing. Drawing on his experience producing professionally narrated audiobooks and radio broadcasts, Simon J. Wood covers selecting suitable material, working with narrators, navigating distribution platforms, and understanding realistic monetisation options. Ideal for writers looking to expand their reach beyond print.",
+        }
     },
 ]

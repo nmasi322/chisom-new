@@ -1,7 +1,41 @@
 <script lang="ts">
     import chisom from '$lib/assets/chisom.jpeg';
 	import WorkWithMe from '$lib/components/work-with-me.svelte';
+    import gsap from "gsap";
+	import { SplitText } from "gsap/all";
+	import { onMount } from "svelte";
+    
+    gsap.registerPlugin(SplitText);
 
+    onMount(() => {
+        const split = SplitText.create('.title', {
+            type: "words, chars",
+            mask: "words",
+            wordsClass: "word",
+            charsClass: "char",
+        })
+        const paragraphSplit = SplitText.create('.paragraph', {
+            type: "lines, chars",
+            mask: "lines",
+            linesClass: "line",
+            charsClass: "char",
+        })
+
+        gsap.from(split.words, {
+            yPercent: 110,
+            opacity: 0,
+            duration: 1, 
+            ease: 'power3.inOut',
+            stagger: {amount:0.5},
+        })
+        gsap.from(paragraphSplit.lines, {
+            yPercent: 110,
+            opacity: 0,
+            duration: 1.5, 
+            ease: 'power3.inOut',
+            stagger: {amount:0.5},
+        })
+    })
 </script>
 
 <section class="grid lg:grid-cols-2 gap-10 max-sm:px-5 sm:max-w-4/5 mx-auto pt-10 mb-20">
@@ -10,13 +44,13 @@
     </div>
     <div class="space-y-6 flex flex-col justify-center">
         <div class="space-y-3">
-            <h1 class="text-4xl sm:text-5xl leading-[43.2px] sm:leading-[57.6px] font-bold">
+            <h1 class="text-4xl sm:text-5xl leading-[43.2px] sm:leading-[57.6px] font-bold title">
                 Bio
             </h1>
-            <h2 class="text-lg font-medium text-accent/80">Creative Writer, Digital Marketer, Editor, and Content Creator</h2>
+            <h2 class="text-lg font-medium text-accent/80 title">Creative Writer, Digital Marketer, Editor, and Content Creator</h2>
         </div>
         <div> 
-            <p class="text-sm leading-6">
+            <p class="text-sm leading-6 paragraph">
             I am Chisom Winifred Asogwa, a digital marketer, content
             creator, copywriter, and editor with a strong editorial
             background. I currently serve as Managing Editor at{" "}

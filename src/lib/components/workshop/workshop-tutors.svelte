@@ -1,8 +1,9 @@
 <script lang="ts">
-    import chisom from '$lib/assets/chisom.jpeg'
+    import chisom from '$lib/assets/chisom-portrait.webp'
     import megan from '$lib/assets/megan.jpg'
     import roseline from '$lib/assets/roseline.jpg'
     import summer from '$lib/assets/summer.jpg'
+    import john from '$lib/assets/john.jpg'
 
     const tutors = [
         {
@@ -26,11 +27,12 @@
             url: 'summer-okibe'
         },
         {
-            img: chisom,
+            img: john,
             name:  "Simon John Wood",
             url: 'simon-john-wood'
         }
     ]
+
 </script>
 
 <section class="max-sm:px-5 sm:max-w-4/5 mx-auto space-y-8">
@@ -43,7 +45,7 @@
             <a href={`/workshop/${tutor.url}`} class="w-full sm:w-[calc(50%-20px)] lg:w-[calc(33.3%-20px)]">
                 <div class='h-auto space-y-3 group'>
                     <div class="mx-auto overflow-hidden">
-                        <img class="object-cover h-120 w-full object-center mx-auto group-hover:scale-110 transition-all duration-300" src={tutor.img} alt={tutor.name} />
+                        <img class="object-cover h-120 w-full grayscale object-center mx-auto group-hover:scale-110 transition-all duration-300" src={tutor.img} alt={tutor.name} />
                     </div>
                     
                     <h4 class="tracking-wide text-xl text-center font-semibold group-hover:text-accent">{tutor.name}</h4>

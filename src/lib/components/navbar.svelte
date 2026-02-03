@@ -126,7 +126,7 @@
 </nav>
 
 <!-- Spacer to prevent content from going under fixed nav -->
-<div class="h-16 sm:h-20"></div>
+<div class="h-16 sm:h-17.5"></div>
 
 <style>
     @keyframes fadeInDown {
