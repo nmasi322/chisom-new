@@ -40,7 +40,7 @@
 
 </script>
 
-<section style="background-image: url('src/lib/assets/cw-workshop-hero.webp');" class="bg-cover max-sm:bg-left min-h-[calc(100vh-62px)] max-sm:flex flex-col justify-center sm:min-h-[80vh] w-full relative">
+<section class="bg-cover bg-img max-sm:bg-left min-h-[calc(100vh-62px)] max-sm:flex flex-col justify-center sm:min-h-[80vh] w-full relative">
     <div class="absolute bg-black/60 inset-0 z-0"></div>
     <div class="max-sm:px-5 sm:max-w-4/5 mx-auto h-full z-10 relative">
         <div class="flex flex-col lg:w-2/3 xl:w-1/2 justify-center gap-6 py-32 md:py-40">

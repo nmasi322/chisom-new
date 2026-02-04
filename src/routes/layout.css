@@ -162,3 +162,7 @@
 		-moz-osx-font-smoothing: grayscale;
 	}
 }
+
+.bg-img {
+	background-image: url('../lib/assets/cw-workshop-hero.webp');
+}
