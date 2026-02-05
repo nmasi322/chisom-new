@@ -1,4 +1,4 @@
-import chisom from '$lib/assets/chisom-portrait.webp';
+import chisom from '$lib/assets/chisom.jpeg';
 import megan from '$lib/assets/megan.jpg';
 import roseline from '$lib/assets/roseline.jpg';
 import summer from '$lib/assets/summer.jpg';
@@ -11,7 +11,7 @@ export const tutors = [
 		genre: 'Fiction',
 		url: 'roseline-mgbodichinma',
 		name: 'Roseline Mgbodichinma',
-		bio: 'Roseline Mgbodichinma is a Nigerian writer, lawyer, and the author of A Body in Spice, which was selected by the African Poetry Book Fund as part of the New Generation African Poets Chapbook Boxset. Her work explores the intimate and political intersections of womanhood, the body, desire, emotion, and the natural world. She is an alumna of the Library of Africa and The African Diaspora (LOATAD) West African Writers Residency Programme.\n\nHer writing has appeared in Isele Magazine, Poet Lore, Brittle Paper, Agbowo, Native Skin, The Willowherb Review, Duke University Press, North Dakota Literary, JFA Human Rights Journal, Kokonut Head Media, Noisy Streets, Tampered Press, Xylom, A Long House, and elsewhere. She has been shortlisted for the Isele Short Story Prize, was a finalist for the Kikwetu Flash Fiction Contest, won the Audience Favourite Award at the OkadaBooks and Union Bank Campus Writing Challenge, and placed third in the PIN Food Poetry Contest.\n\nShe is a mentor at SprinNG and is passionate about documenting women’s stories across form and genre. She blogs at www.mgbodichi.com.\n\nBuy a copy of the Boxset here: https://www.amazon.com/Kumi-Na-Moja-New-Generation-Chapbook/dp/1636142419',
+		bio: 'Roseline Mgbodichinma is a Nigerian writer, lawyer, and the author of A Body in Spice, which was selected by the African Poetry Book Fund as part of the New Generation African Poets Chapbook Boxset. Her work explores the intimate and political intersections of womanhood, the body, desire, emotion, and the natural world. She is an alumna of the Library of Africa and The African Diaspora (LOATAD) West African Writers Residency Programme.\n\nHer writing has appeared in Isele Magazine, Poet Lore, Brittle Paper, Agbowo, Native Skin, The Willowherb Review, Duke University Press, North Dakota Literary, JFA Human Rights Journal, Kokonut Head Media, Noisy Streets, Tampered Press, Xylom, A Long House, and elsewhere. She has been shortlisted for the Isele Short Story Prize, was a finalist for the Kikwetu Flash Fiction Contest, won the Audience Favourite Award at the OkadaBooks and Union Bank Campus Writing Challenge, and placed third in the PIN Food Poetry Contest.\n\nShe is a mentor at SprinNG and is passionate about documenting women’s stories across form and genre. She blogs at www.mgbodichi.com.',
 		masterclass: {
 			title: 'Building a Successful Career as an African Creative Writer',
 			description:
@@ -25,7 +25,13 @@ export const tutors = [
 			],
 			closingWords:
 				'This session combines career strategy with mentorship, giving emerging writers actionable tools to take their writing to the next level.'
-		}
+		},
+		books: [
+			{
+				title: 'Kumi Na Moja: New-Generation African Poets: A Chapbook Box Set',
+				url: 'https://www.amazon.com/Kumi-Na-Moja-New-Generation-Chapbook/dp/1636142419'
+			},
+		]
 	},
 	{
 		img: summer,
@@ -33,13 +39,19 @@ export const tutors = [
 		genre: 'Non-fiction',
 		url: 'summer-okibe',
 		name: 'Summer Okibe',
-		bio: 'Summer Okibe is an author, environmental and regulatory lawyer, and energy and climate policy specialist based in Canada. She is the author of The Rights of Indigenous Peoples Explained, a timely and accessible work that unpacks complex legal and human rights frameworks for global audiences.\n\nAlongside her writing, Summer is a doctoral researcher and a strong advocate for inclusive and sustainable development. She combines academic rigour with grassroots impact, having secured over $400,000 in scholarships and disbursed funds to support less-privileged children across Nigeria. Her work consistently bridges policy, education, and social justice.\n\nSummer is currently developing Aderayah Academy, a vision for a tuition-free, solar-powered school in Enugu designed to provide underserved children with access to quality education. She also recently launched a ₦500,000 annual prize for outstanding female law graduates at Chukwuemeka Odumegwu Ojukwu University (COOU), reinforcing her commitment to equity and mentorship.\n\nHer international engagement includes serving as the UNFCCC YOUNGO Energy Working Group Delegate at the 2025 UN ECOSOC Youth Forum, the International Youth Conference, and the World Bank Group Youth Summit. She has also been nominated to attend and contribute at UN SB62, the 4th International Conference on Financing for Development (FFD4), and the Canadian Diplomat platform. In addition, she has trained youths and emerging climate leaders in climate policy research and writing through the EcoChampion’s Climate Education Fellowship.\n\nRecognised with honours such as the Flight 302 Legacy Award and JCI Top 100 Outstanding Young Persons of Nigeria, Summer’s leadership continues to inspire young people across the continent. She has led initiatives advancing healthcare access for vulnerable children and families, and spearheaded youth-focused projects including the Environmental & Climate Change Spelling Bee Competition and the Keep Your Environment Clean Project.\n\nA mentor to over 2,000 African students and young professionals, Summer has supported many in securing global education opportunities, scholarships, and leadership placements.\n\nHer book, The Rights of Indigenous Peoples Explained, is available on Amazon: https://www.amazon.ca/Rights-Indigenous-Peoples-Explained/dp/1738699315',
+		bio: 'Summer Okibe is an author, environmental and regulatory lawyer, and energy and climate policy specialist based in Canada. She is the author of The Rights of Indigenous Peoples Explained, a timely and accessible work that unpacks complex legal and human rights frameworks for global audiences.\n\nAlongside her writing, Summer is a doctoral researcher and a strong advocate for inclusive and sustainable development. She combines academic rigour with grassroots impact, having secured over $400,000 in scholarships and disbursed funds to support less-privileged children across Nigeria. Her work consistently bridges policy, education, and social justice.\n\nSummer is currently developing Aderayah Academy, a vision for a tuition-free, solar-powered school in Enugu designed to provide underserved children with access to quality education. She also recently launched a ₦500,000 annual prize for outstanding female law graduates at Chukwuemeka Odumegwu Ojukwu University (COOU), reinforcing her commitment to equity and mentorship.\n\nHer international engagement includes serving as the UNFCCC YOUNGO Energy Working Group Delegate at the 2025 UN ECOSOC Youth Forum, the International Youth Conference, and the World Bank Group Youth Summit. She has also been nominated to attend and contribute at UN SB62, the 4th International Conference on Financing for Development (FFD4), and the Canadian Diplomat platform. In addition, she has trained youths and emerging climate leaders in climate policy research and writing through the EcoChampion’s Climate Education Fellowship.\n\nRecognised with honours such as the Flight 302 Legacy Award and JCI Top 100 Outstanding Young Persons of Nigeria, Summer’s leadership continues to inspire young people across the continent. She has led initiatives advancing healthcare access for vulnerable children and families, and spearheaded youth-focused projects including the Environmental & Climate Change Spelling Bee Competition and the Keep Your Environment Clean Project.\n\nA mentor to over 2,000 African students and young professionals, Summer has supported many in securing global education opportunities, scholarships, and leadership placements.',
 		masterclass: {
 			title: 'Accessing Global Scholarships, Grants & Opportunities',
 			subTitle: 'A Practical Guide for African Writers',
 			description:
 				'In this session, Summer Okibe will demystify how African writers and creatives can access global scholarships, grants, fellowships, and funded opportunities. Drawing from her personal experience securing over $400,000 in scholarships and navigating international institutions, Summer will break down what actually works and what doesn’t.\n\nAttendees will learn how to identify legitimate opportunities, assess eligibility, and position themselves competitively through strong applications, statements, and proposals. The session will also explore how writing skills can be leveraged beyond literary spaces to unlock funding, education, and leadership opportunities globally.'
-		}
+		},
+		books: [
+			{
+				title: 'The Rights of Indigenous Peoples Explained',
+				url: 'https://www.amazon.ca/Rights-Indigenous-Peoples-Explained/dp/1738699315'
+			},
+		]
 	},
 	{
 		img: megan,
@@ -114,9 +126,9 @@ export const tutors = [
 			}
 		],
 		masterclass: {
-			title: 'Creating and Monetising Audiobooks',
+			title: 'How to Create an Audiobook: Narrators, Platforms, and What to Expect',
 			description:
-				'This session explores how writers can turn their work into audiobooks and generate income from audio publishing. Drawing on his experience producing professionally narrated audiobooks and radio broadcasts, Simon J. Wood covers selecting suitable material, working with narrators, navigating distribution platforms, and understanding realistic monetisation options. Ideal for writers looking to expand their reach beyond print.'
+				'This masterclass offers a practical, behind-the-scenes guide to creating an audiobook from start to finish. Participants will explore how to choose the right narrator (including whether to self-narrate), understand the technical and performance considerations involved, and navigate the major audiobook platforms available today.\n\nThe session will also unpack what to realistically expect during production; timelines, costs, common challenges, and distribution outcomes equipping writers with the knowledge needed to confidently bring their stories to life in audio form.'
 		}
 	}
 ];

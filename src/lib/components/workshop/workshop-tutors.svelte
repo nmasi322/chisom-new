@@ -1,5 +1,5 @@
 <script lang="ts">
-	import chisom from '$lib/assets/chisom-portrait.webp';
+	import chisom from '$lib/assets/chisom.jpeg';
 	import megan from '$lib/assets/megan.jpg';
 	import roseline from '$lib/assets/roseline.jpg';
 	import summer from '$lib/assets/summer.jpg';

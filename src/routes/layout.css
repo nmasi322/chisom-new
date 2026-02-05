@@ -166,3 +166,9 @@
 .bg-img {
 	background-image: url('../lib/assets/cw-workshop-hero.webp');
 }
+
+@media (width < 40rem /* 640px */) {
+	.bg-img {
+		background-image: url('../lib/assets/cw-workshop-hero-mobile.webp');
+	}
+}

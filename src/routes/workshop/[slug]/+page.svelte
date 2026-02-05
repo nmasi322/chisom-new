@@ -4,6 +4,7 @@
 	import { page } from '$app/state';
 	import Button from '$lib/components/ui/button/button.svelte';
 	import { tutors } from '$lib/data/tutors';
+	import { CONFIG } from '$lib/config';
 	const authorPath = page.url.pathname.split('/')[2];
 
 	const authorInfo = tutors.find((t) => t.url === authorPath);
@@ -31,16 +32,18 @@
 							<ul class="list-disc pl-5">
 								{#each authorInfo.books as book}
 									<li>
-										<a href={book.url}>
+										<a target="_blank" href={book.url}>
 											<p class="text-accent/70">{book.title}</p>
 										</a>
 									</li>
 								{/each}
 							</ul>
-							<span class="text-sm text-gray-500"
-								>N.B. The first three titles are also available as audiobooks, narrated by Angus
-								Freathy. Obtainable from Amazon, Audible, and iTunes.</span
-							>
+							{#if authorPath === 'simon-john-wood'}
+								 <span class="text-sm text-gray-500"
+									 >N.B. The first three titles are also available as audiobooks, narrated by Angus
+									 Freathy. Obtainable from Amazon, Audible, and iTunes.</span
+								 >
+							{/if}
 						</div>
 					{/if}
 				</div>
@@ -71,10 +74,12 @@
 							<p class="pt-3">{authorInfo.masterclass.closingWords}</p>
 						{/if}
 					</div>
-					<Button size="lg">
-						<p class="text-white">Register Now</p>
-						<ArrowRightIcon />
-					</Button>
+					<a target="_blank" href={CONFIG.ticketsLink}>
+						<Button size="lg">
+							<p class="text-white">Register Now</p>
+							<ArrowRightIcon />
+						</Button>
+					</a>
 				</div>
 			</div>
 		{/if}
