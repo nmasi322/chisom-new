@@ -51,7 +51,7 @@
 			</div>
 			<div class="space-y-3">
 				<h1
-					class="title text-5xl leading-16 font-black text-white sm:text-6xl sm:leading-20 lg:text-7xl lg:leading-28 xl:text-8xl"
+					class="title text-5xl leading-14 font-black text-white sm:text-6xl sm:leading-20 lg:text-7xl lg:leading-28 xl:text-8xl"
 				>
 					The Creative Writing Workshop
 				</h1>
