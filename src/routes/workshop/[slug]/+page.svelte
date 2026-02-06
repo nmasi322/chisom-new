@@ -1,10 +1,9 @@
 <script lang="ts">
-	import { ArrowRightIcon } from 'lucide-svelte';
 
 	import { page } from '$app/state';
-	import Button from '$lib/components/ui/button/button.svelte';
 	import { tutors } from '$lib/data/tutors';
-	import { CONFIG } from '$lib/config';
+	import RegisterBtns from '$lib/components/workshop/register-btns.svelte';
+
 	const authorPath = page.url.pathname.split('/')[2];
 
 	const authorInfo = tutors.find((t) => t.url === authorPath);
@@ -74,12 +73,7 @@
 							<p class="pt-3">{authorInfo.masterclass.closingWords}</p>
 						{/if}
 					</div>
-					<a target="_blank" href={CONFIG.ticketsLink}>
-						<Button size="lg">
-							<p class="text-white">Register Now</p>
-							<ArrowRightIcon />
-						</Button>
-					</a>
+					<RegisterBtns />
 				</div>
 			</div>
 		{/if}

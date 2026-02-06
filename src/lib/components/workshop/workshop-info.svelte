@@ -1,6 +1,5 @@
 <script lang="ts">
-	import { CONFIG } from '$lib/config';
-	import Button from '../ui/button/button.svelte';
+	import RegisterBtns from './register-btns.svelte';
 
 	const targetAudience = [
 		'You are an emerging or early‑career writer who wants clarity on how to build a sustainable writing life.',
@@ -32,8 +31,6 @@
 			<h2 class="text-xl leading-relaxed font-semibold">Workshop Dates</h2>
 			<p class="text-black/80">February 26th–28th 2026. <br /> 4:00 PM – 7:00 PM (WAT)</p>
 		</div>
-			<a target="_blank" href={CONFIG.ticketsLink}>
-				<Button size="lg">Register Now</Button>
-			</a>
+		<RegisterBtns />
 	</div>
 </section>
