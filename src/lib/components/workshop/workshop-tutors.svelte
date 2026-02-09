@@ -37,7 +37,7 @@
 <section class="mx-auto space-y-8 max-sm:px-5 sm:max-w-4/5">
 	<div>
 		<h1 class="text-3xl leading-[43.2px] font-bold">Tutors</h1>
-		<h2 class="text-lg font-medium text-accent/80">Learn from industry-leading mentors</h2>
+		<h2 class="text-lg font-medium text-accent/80">Learn from outstanding mentors</h2>
 	</div>
 	<div class="flex flex-wrap justify-center gap-6 gap-y-10 sm:gap-y-16">
 		{#each tutors as tutor, i}
